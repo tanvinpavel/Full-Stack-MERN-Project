@@ -5,7 +5,7 @@ const Services = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/services/limit")
+        fetch("https://arcane-anchorage-83436.herokuapp.com/services/limit")
             .then(res => res.json())
             .then(data => {
                 setServices(data);
@@ -16,7 +16,7 @@ const Services = () => {
         <div>
             <div className="container my-5">
                 <div className="text-center my-3">
-                    <h2>Services</h2>
+                    <h2>Products</h2>
                     <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{"width": "150px", "height": "4px"}} ></hr>
                 </div>
                 { services.length < 1 ?

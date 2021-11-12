@@ -7,7 +7,7 @@ const MangeOrders = () => {
     const [updater, setUpdater] = useState();
 
     useEffect(() => {
-        axios.get('http://localhost:5000/allOrder')
+        axios.get('https://arcane-anchorage-83436.herokuapp.com/allOrder')
             .then(res => setAllOrder(res.data));
     },[updater]);
 
@@ -15,7 +15,7 @@ const MangeOrders = () => {
         const confirmation = window.confirm('Are you sure you want to delete this item');
 
         if(confirmation){
-            axios.get(`http://localhost:5000/order/deleteOrder/${id}`)
+            axios.get(`https://arcane-anchorage-83436.herokuapp.com/order/deleteOrder/${id}`)
             .then(res => {
                 console.log(res);
                 if(res.data.deletedCount > 0){
@@ -30,7 +30,7 @@ const MangeOrders = () => {
     const handlerUpdateStatus = (id, status) => {
         console.log(id, status);
         const data = { id: id, status: status };
-        axios.post("http://localhost:5000/updateStatus", data)
+        axios.post("https://arcane-anchorage-83436.herokuapp.com/updateStatus", data)
             .then(res => {
                 if(res.data.modifiedCount > 0){
                     setUpdater(res);

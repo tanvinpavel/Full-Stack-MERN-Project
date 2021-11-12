@@ -43,6 +43,7 @@ const Login = () => {
     .then((result) => {
       const user = result.user;
       setUser(user);
+      saveGoogleUser( user.displayName, user.email );
       setError('');
       history.push(from);
     })

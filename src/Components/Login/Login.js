@@ -35,6 +35,7 @@ const Login = () => {
     .then((result) => {
       const user = result.user;
       setUser(user);
+      saveGoogleUser( user.displayName, user.email );
       setError('');
       history.push(from);
     })
@@ -56,8 +57,7 @@ const Login = () => {
     .then(result => {
       const user = result.user;
       setUser(user)
-      history.push(from)
-      console.log(user);
+      history.push(from);
     })
     .finally(() => setIsLoading(false))
     .catch((error) => {

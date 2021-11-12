@@ -17,7 +17,7 @@ const ServiceDetails = () => {
     // setIsLoading(true)
 
     useEffect( () => {
-       fetch(`http://localhost:5000/services/${servicesId}`)
+       fetch(`https://arcane-anchorage-83436.herokuapp.com/services/${servicesId}`)
         .then(res => res.json())
         .then(data => {
             setServiceDetails(data)
@@ -29,7 +29,7 @@ const ServiceDetails = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         // console.log(data);
-        axios.post('http://localhost:5000/services/order', data)
+        axios.post('https://arcane-anchorage-83436.herokuapp.com/services/order', data)
         .then(res => {
             if(res.data.insertedId){
                 alert("data insert successfully");

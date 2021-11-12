@@ -30,7 +30,7 @@ const useFirebase = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/user/${user.email}`)
+    fetch(`https://arcane-anchorage-83436.herokuapp.com/user/${user.email}`)
       .then(res => res.json())
       .then(data => {
         setAdmin(data.admin);
@@ -58,9 +58,10 @@ const useFirebase = () => {
     return signInWithPopup(auth, facebookProvider)
   }
 
+  //save user on mongodb
   const saveUser = (displayName, email) => {
     const user = { displayName, email };
-    fetch('http://localhost:5000/users', {
+    fetch('https://arcane-anchorage-83436.herokuapp.com/users', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -69,9 +70,10 @@ const useFirebase = () => {
     }).then()
   }
 
+  //save user on mongodb
   const saveGoogleUser = (displayName, email) => {
     const user = { displayName, email };
-    fetch('http://localhost:5000/users', {
+    fetch('https://arcane-anchorage-83436.herokuapp.com/users', {
       method: 'PUT',
       headers: {
         'content-type': 'application/json'

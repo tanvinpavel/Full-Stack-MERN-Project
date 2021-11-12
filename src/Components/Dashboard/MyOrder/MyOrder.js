@@ -14,7 +14,7 @@ const MyOrder = () => {
     // console.log(email);
     
     useEffect(() => {
-        axios.post("http://localhost:5000/services/myOrder", {
+        axios.post("https://arcane-anchorage-83436.herokuapp.com/services/myOrder", {
             email: `${email}`})
             .then(res => setServices(res.data));
     } ,[]);
@@ -24,7 +24,7 @@ const MyOrder = () => {
         const confirmation = window.confirm('Are you sure you want to delete this order');
 
         if(confirmation){
-            axios.get(`http://localhost:5000/order/deleteOrder/${id}`)
+            axios.get(`https://arcane-anchorage-83436.herokuapp.com/order/deleteOrder/${id}`)
                 .then(res => {
                     if(res.data.deletedCount > 0){
                         const resData = services.filter(sServices => sServices._id !== id);
