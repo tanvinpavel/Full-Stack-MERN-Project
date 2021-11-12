@@ -23,7 +23,6 @@ const Header = () => {
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="mx-auto navbar-nav">
                         <NavLink className="nav-link py-0" activeStyle={active} to="/home">Home</NavLink>
-                        <NavLink className="nav-link py-0" activeStyle={active} to="/about">About</NavLink>
                         <NavLink className="nav-link py-0" activeStyle={active} to="/allProducts">All Products</NavLink>
                         {
                             user.uid && <NavLink className="nav-link py-0" activeStyle={active} to="/dashboard">Dashboard</NavLink>

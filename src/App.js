@@ -6,7 +6,6 @@ import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
-import About from './Components/About/About';
 import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 import AllProducts from './Components/AllProducts/AllProducts';
 
@@ -44,10 +43,6 @@ function App() {
           <PrivateRoute path="/details/:servicesId">
             <ServiceDetails></ServiceDetails>
           </PrivateRoute>
-
-          <Route path="/about">
-            <About></About>
-          </Route>
 
           <Route path="*">
             <NotFound></NotFound>
