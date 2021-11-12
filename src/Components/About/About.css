@@ -1,0 +1,63 @@
+.logo-resize{
+    padding: 10% 40%;
+    background: rebeccapurple;
+    height: 160px;
+}
+
+.card-hover{
+    transition: 0.4s;
+}
+
+.card-hover:hover{
+    box-shadow: 10px 10px 15px 0px rgb(0 0 0 / 12%);
+    margin-top: -10px;
+}
+
+#bg-img{
+    background: url("https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cp-en-us/banners/cp-valravn-filterbanner.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 300px;
+    position: relative;
+}
+
+#bg-img::after{
+    content: '';
+    background: rgba(0,0,0,.2);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.text-color{
+    color: #ffff;
+}
+.event-card-img{
+    font-size: 80px;
+    text-align: center;
+    color: #407cc9;
+    padding: 15px 0;
+}
+
+@media screen and (min-width: 270px) {
+    .logo-resize{
+        padding: 12% 38%;
+        height: 100px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .logo-resize{
+        padding: 5% 38%;
+        height: 140px;    
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .logo-resize{
+        padding: 14% 36%;
+        height: 180px;
+    }
+}

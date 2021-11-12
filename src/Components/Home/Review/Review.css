@@ -1,0 +1,14 @@
+/* review area design */
+
+.head-title{
+    color: #707070;
+    font-size: 40px;
+}
+.user-img{
+    width: 150px;
+    height: 150px;
+    margin: 8px auto;
+    border: 7px solid gray;
+    border-radius: 50%;
+    box-shadow: 1px 1px 15px 1px rgb(202, 202, 202);
+}

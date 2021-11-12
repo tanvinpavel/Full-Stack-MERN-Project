@@ -1,0 +1,76 @@
+[
+    {
+        
+        "id": 1,
+        "name": "DR. A. S. M. ZAHED",
+        "degree": "MBBS, FCPS (Medicine)",
+        "medical":"Associate  Professor, Medicine Chattogram Medical College",
+        "time": "Time: 5.30 pm to 8 pm (Only Sun & Wed)",
+         "img":"https://i.ibb.co/37F6BfQ/Dr-ASMJahed.jpg"
+      },
+    {
+        
+        "id": 2,
+        "name": "DR. MOHAMMAD MOINUDDIN CHOWDHURY",
+        "degree": "MBBS, FCPS (Medicine)",
+        "medical":"Assistant Professor, CMCH",
+        "time": "Time: 5pm to 9pm (Sat,Mon,Wednes)",
+         "img":"https://i.ibb.co/wRNqBs7/Dr-Mainuddin-Medicine.jpg"
+      },
+    {
+        
+        "id": 3,
+        "name": "DR. MOSTAFA NOOR MOHSIN",
+        "degree": "MBBS, FCPS (Medicine) MD (Gastroenterology)",
+        "medical":"Assistant Professor, CMCH",
+        "time": "Time: 5pm to 7pm (Fri off)",
+         "img":"https://i.ibb.co/ZHhHxTC/Dr-Mostafa-Nur-Mohsin-Gastro.jpg"
+      },
+    {
+        
+        "id": 4,
+        "name": "DR. MUHAMMAD TAYEB",
+        "degree": "MBBS, BCS (Health) MD (Neuro Medicine)",
+        "medical":"Assistant Professor, Neurology",
+        "time": "Time: 5pm to 7pm (Sat, Mon & Wed)",
+         "img":"https://i.ibb.co/2qXgLw9/Dr-Muhammad-Taiyab-Neuromedicine.jpg"
+      },
+    {
+        
+        "id": 5,
+        "name": "DR. MD. MUHITUL ISLAM",
+        "degree": "MBBS, MD (Neuro Medicine)",
+        "medical":"Associate Professor, Neurology Sir Salimullah Medical College",
+        "time": "Time: Call Serial Number",
+         "img":" https://i.ibb.co/BBcct0y/Dr-Muhitul-Alam-Neurology.jpg"
+      },
+    {
+        
+        "id": 6,
+        "name": "DR. MOHAMMAD REZAUL KARIM",
+        "degree": "MBBS, BCS (Health)",
+        "medical":"MD (Internal Medicine) Room No.: 227",
+        "time": "Time: 5pm to 6pm (Sat,Mon,Thurs)",
+         "img":"https://i.ibb.co/MVs1Cb5/Dr-Rezaul-Karim-Medicine.jpg"
+      },
+    {
+        
+        "id": 7,
+        "name": "DR. SAIFUDDIN MAHMUD",
+        "degree": "MBBS, BCS (Health) FCPS (Medicine)",
+        "medical":"Consultant, Medicine",
+        "time": "Time: 6.30pm to 9pm (Sat to Thu)",
+         "img":"https://i.ibb.co/37F6BfQ/Dr-ASMJahed.jpg"
+      },
+    {
+        
+        "id": 8,
+        "name": "DR. UMME TAHERA",
+        "degree": "MBBS, FCPS (Medicine)",
+        "medical":"Assistant Professor, Medicine Chittagong Int. Medical College",
+        "time": "Time: 6 pm -9 pm (Thu &Friday Off)",
+         "img":"https://i.ibb.co/5sk4scY/Dr-Umme-Tahera-Medicine.jpg"
+      }
+
+      
+]
