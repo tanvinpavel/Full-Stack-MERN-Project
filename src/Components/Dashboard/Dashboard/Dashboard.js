@@ -12,6 +12,7 @@ import AddReview from '../AddReview/AddReview';
 import Home from '../Home/Home';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import MangeOrders from '../MangeOrders/MangeOrders';
+import MangeProduct from '../MangeProduct/MangeProduct';
 import MyOrder from '../MyOrder/MyOrder';
 import Payment from '../Payment/Payment';
 import "./Dashboard.css";
@@ -57,7 +58,7 @@ const Dashboard = () => {
                                 </NavLink>
                             </li>
                             <li>
-                            <NavLink to={`${url}/manage_products`} className={isActive => "nav-link text-white" + (!isActive ? "" : "active") } >
+                            <NavLink to={`${url}/mange_products`} className={isActive => "nav-link text-white" + (!isActive ? "" : "active") } >
                                 <i className="fas fa-tasks me-2"></i>
                                 Manage products
                                 </NavLink>
@@ -120,6 +121,9 @@ const Dashboard = () => {
                     </SecureAdmin>
                     <SecureAdmin path={`${path}/add_product`}>
                         <AddProduct></AddProduct>
+                    </SecureAdmin>
+                    <SecureAdmin path={`${path}/mange_products`}>
+                        <MangeProduct></MangeProduct>
                     </SecureAdmin>
 
 

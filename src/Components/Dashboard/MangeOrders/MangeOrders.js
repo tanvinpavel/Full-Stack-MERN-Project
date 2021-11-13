@@ -11,6 +11,7 @@ const MangeOrders = () => {
             .then(res => setAllOrder(res.data));
     },[updater]);
 
+    //delete item
     const handlerDeleteOrder = (id) => {
         const confirmation = window.confirm('Are you sure you want to delete this item');
 

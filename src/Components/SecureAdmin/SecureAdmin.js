@@ -5,9 +5,9 @@ import useAuth from '../../hooks/useAuth';
 const SecureAdmin = ({children, ...rest}) => {
     const {admin, isLoading} = useAuth();
 
-    if(isLoading){
+    if(!admin){
         return <div className="text-center my-5 py-5">
-            <div className="spinner-border text-dark" role="status"> <span className="visually-hidden">Loading...</span> </div>
+            <div className="spinner-border text-white" role="status"> <span className="visually-hidden">Loading...</span> </div>
         </div>
     }
 

@@ -29,6 +29,7 @@ const useFirebase = () => {
     return signInWithPopup(auth, googleProvider);
   };
 
+  //check admin
   useEffect(() => {
     fetch(`https://arcane-anchorage-83436.herokuapp.com/user/${user.email}`)
       .then(res => res.json())
