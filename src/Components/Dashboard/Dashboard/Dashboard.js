@@ -119,11 +119,11 @@ const Dashboard = () => {
                     <SecureAdmin path={`${path}/manage_all_orders`}>
                         <MangeOrders></MangeOrders>
                     </SecureAdmin>
-                    <SecureAdmin path={`${path}/add_product`}>
-                        <AddProduct></AddProduct>
-                    </SecureAdmin>
                     <SecureAdmin path={`${path}/mange_products`}>
                         <MangeProduct></MangeProduct>
+                    </SecureAdmin>
+                    <SecureAdmin path={`${path}/add_product`}>
+                        <AddProduct></AddProduct>
                     </SecureAdmin>
 
 

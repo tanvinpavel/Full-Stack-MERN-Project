@@ -10,7 +10,7 @@ const MangeProduct = () => {
     useEffect(() => {
         axios.get('https://arcane-anchorage-83436.herokuapp.com/services')
             .then(res => setAllProducts(res.data))
-    },[])
+    })
 
     const handlerDeleteOrder = (id) => {
         const confirmation = window.confirm('Are you sure you want to delete this item');
@@ -27,7 +27,7 @@ const MangeProduct = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container" style={{"height": "650px", "overflow-x": "auto"}}>
             <div className="text-center my-3">
                 <h2>Mange All Orders</h2>
                 <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{"width": "150px", "height": "4px"}} ></hr>

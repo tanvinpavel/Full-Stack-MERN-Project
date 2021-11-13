@@ -52,6 +52,13 @@ const AddReview = () => {
                                 </div>
                             </div>
                             <div className="form-group row mb-3">
+                                <label className="col-sm-2 col-form-label">Give a rating</label>
+                                <div className="col-sm-10">
+                                    <input type="number" size="5" {...register("rating", { required: true })} className="form-control" placeholder="Give a rating"/>
+                                    {errors.rating && <span className="text-danger">This field is required</span>}
+                                </div>
+                            </div>
+                            <div className="form-group row mb-3">
                                 <label className="col-sm-2 col-form-label">Comment</label>
                                 <div className="col-sm-10">
                                     <textarea type="text" {...register("comment", { required: true })} className="form-control" rows="3" placeholder="comment"/>
