@@ -35,7 +35,7 @@ const AddProduct = () => {
                             <div className="form-group row mb-3">
                                 <label className="col-sm-2 col-form-label">Short Description</label>
                                 <div className="col-sm-10">
-                                    <textarea type="text" {...register("details", { required: true })} class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="description"/>
+                                    <textarea type="text" {...register("details", { required: true })} className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="description"/>
                                     {errors.details && <span>This field is required</span>}
                                 </div>
                             </div>

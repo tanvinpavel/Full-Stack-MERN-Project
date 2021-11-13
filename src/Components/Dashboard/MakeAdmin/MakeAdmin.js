@@ -27,8 +27,8 @@ const MakeAdmin = () => {
         <div className="row justify-content-center">
             <div className="col-md-8">
 
-                { success && <div class="alert alert-success alert-dismissible fade show" role="alert">New Admin added successfully.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                { success && <div className="alert alert-success alert-dismissible fade show" role="alert">New Admin added successfully.
+                <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div> }
 
                 <h2 className="text-center mb-3">Add An Admin</h2>

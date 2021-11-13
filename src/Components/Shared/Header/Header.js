@@ -42,7 +42,7 @@ const Header = () => {
                     :
                     <div className="me-5">
                         <Link to="/login">
-                            <span className="cus-login-icon"><i class="far fa-user-circle"></i></span>
+                            <span className="cus-login-icon"><i className="far fa-user-circle"></i></span>
                         </Link>
                     </div> }
                 </div>

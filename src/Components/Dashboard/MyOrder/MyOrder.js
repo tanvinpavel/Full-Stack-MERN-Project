@@ -7,7 +7,7 @@ import "./MyOrder.css";
 const MyOrder = () => {
 
     const {user} = useAuth();
-    const [services, setServices] = useState([]);
+    const [order, setOrder] = useState([]);
 
 
     const email = user.email;
@@ -16,8 +16,8 @@ const MyOrder = () => {
     useEffect(() => {
         axios.post("https://arcane-anchorage-83436.herokuapp.com/services/myOrder", {
             email: `${email}`})
-            .then(res => setServices(res.data));
-    } ,[]);
+            .then(res => setOrder(res.data));
+    });
 
     const handlerDeleteBtn = (id) => {
 
@@ -27,8 +27,8 @@ const MyOrder = () => {
             axios.get(`https://arcane-anchorage-83436.herokuapp.com/order/deleteOrder/${id}`)
                 .then(res => {
                     if(res.data.deletedCount > 0){
-                        const resData = services.filter(sServices => sServices._id !== id);
-                        setServices(resData);
+                        const resData = order.filter(sServices => sServices._id !== id);
+                        setOrder(resData);
                     }
                 })
         }
@@ -41,28 +41,36 @@ const MyOrder = () => {
                             <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{"width": "150px", "height": "4px"}} ></hr>
                         </div>
                     <div className="col-md-8 cus-table">
-                        <div style={{"width": "700px", "margin": "0 auto"}}>
-                            <div className="ms-4 d-flex justify-content-around align-items-center" style={{"borderBottom": "2px solid gray"}}>
-                                <h6>Name</h6>
-                                <h6>Email</h6>
-                                <h6>Services Name</h6>
-                                <h6>District</h6>
-                                <h6>Action</h6>
+                        <div style={{"width": "770px", "margin": "0 auto"}}>
+                            <div style={{"borderBottom": "2px solid gray"}}>
+                                <h6 className="d-inline" style={{"padding":"0 55px"}}>Name</h6>
+                                <h6 className="d-inline" style={{"padding":"0 60px"}}>Email</h6>
+                                <h6 className="d-inline" style={{"paddingLeft":"40px"}}>Services Name</h6>
+                                <h6 className="d-inline" style={{"padding":"0 22px"}}>Status</h6>
+                                <h6 className="d-inline" style={{"padding":"0 24px"}}>District</h6>
+                                <h6 className="d-inline" style={{"padding":"0 30px"}}>Action</h6>
                             </div>
                             <div>
                                 { 
-
-                                services.length < 1 ? <div className="text-center">
+                                    order.length < 1 ? <div className="text-center">
                                         <h2 className="my-5 text-danger">No Order has been parches</h2>
                                         <Link className="cus-btn px-4 d-inline-block mb-3" to={`/home`}>Order Now</Link>
                                     </div>
                                     :
-                                    services.map(singleOrder => <div>
+                                    order.map(singleOrder => <div key={singleOrder._id}>
                                         <div className="card my-3 shadow">
-                                            <div className="card-body d-flex justify-content-around align-items-center">
+                                            <div className="card-body d-flex justify-content-evenly align-items-center">
                                                 <h6 className="card-title">{singleOrder.name}</h6>
                                                 <h6 className="card-title">{singleOrder.email}</h6>
                                                 <h6 className="card-title">{singleOrder.title}</h6>
+
+                                                {
+                                                singleOrder.status === 'pending' ?
+                                                    <span className="bg-warning p-1 rounded text-white d-inline-block">{singleOrder.status}</span>
+                                                :
+                                                    <span className="bg-success p-1 rounded text-white d-inline-block">{singleOrder.status}</span>
+                                                }
+                                                
                                                 <h6 className="card-title">{singleOrder.district}</h6>
                                                 <button onClick={() => handlerDeleteBtn(singleOrder._id)} className="btn btn-danger">Delete</button>
                                             </div>

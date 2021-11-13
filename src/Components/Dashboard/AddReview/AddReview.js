@@ -27,8 +27,8 @@ const AddReview = () => {
 
     return (
         <div className="container">
-                { success && <div class="alert alert-success alert-dismissible fade show w-75 mx-auto" role="alert">Review Added
-                    <button type="button" onClick={resetAlert} class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                { success && <div className="alert alert-success alert-dismissible fade show w-75 mx-auto" role="alert">Review Added
+                    <button type="button" onClick={resetAlert} className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div> }
 
                 <div className="text-center my-3">
@@ -54,7 +54,7 @@ const AddReview = () => {
                             <div className="form-group row mb-3">
                                 <label className="col-sm-2 col-form-label">Comment</label>
                                 <div className="col-sm-10">
-                                    <textarea type="text" {...register("comment", { required: true })} class="form-control" rows="3" placeholder="comment"/>
+                                    <textarea type="text" {...register("comment", { required: true })} className="form-control" rows="3" placeholder="comment"/>
                                     {errors.comment && <span className="text-danger">This field is required</span>}
                                 </div>
                             </div>

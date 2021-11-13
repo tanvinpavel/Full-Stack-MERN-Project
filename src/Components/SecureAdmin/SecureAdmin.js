@@ -7,7 +7,7 @@ const SecureAdmin = ({children, ...rest}) => {
 
     if(isLoading){
         return <div className="text-center my-5 py-5">
-            <div class="spinner-border text-dark" role="status"> <span class="visually-hidden">Loading...</span> </div>
+            <div className="spinner-border text-dark" role="status"> <span className="visually-hidden">Loading...</span> </div>
         </div>
     }
 

@@ -28,7 +28,6 @@ const MangeOrders = () => {
 
     //update function
     const handlerUpdateStatus = (id, status) => {
-        console.log(id, status);
         const data = { id: id, status: status };
         axios.post("https://arcane-anchorage-83436.herokuapp.com/updateStatus", data)
             .then(res => {
@@ -46,7 +45,12 @@ const MangeOrders = () => {
                 <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{"width": "150px", "height": "4px"}} ></hr>
             </div>
             <div className="table-responsive">
-                <table className="table table-striped table-hover text-center">
+
+                {
+                    allOrder.length < 1 ? <div className="text-center my-5 py-5">
+                        <div className="spinner-border text-dark" role="status"> <span className="visually-hidden">Loading...</span> </div>
+                    </div>
+                    : <table className="table table-striped table-hover text-center">
                     <thead className="table-dark">
                         <tr>
                             <th scope="col">Name</th>
@@ -80,6 +84,7 @@ const MangeOrders = () => {
                         }
                     </tbody>
                 </table>
+                }
             </div>
         </div>
     );
